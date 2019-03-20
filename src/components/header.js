@@ -6,11 +6,16 @@ function MainHeaderBorder(props){
 function MainHeaderContent(props){
 	return (
 		<div className='page-content main-header-content'>
-			<div classList='main-header-section'>
-				
+			<div className='main-header-section'>
+				<a className='main-header-home-link'>
+					<img className='main-header-logo' 
+						src='https://www.slant.co/images/logo.svg' 
+						alt='logo'
+					/>
+				</a>
 			</div>
-			<div classList='main-header-section flex-grow-1'></div>
-			<div classList='main-header-section'></div>
+			<div className='main-header-section flex-grow-1'></div>
+			<div className='main-header-section'></div>
 		</div>
 	)
 }

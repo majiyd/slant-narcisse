@@ -30,6 +30,10 @@
 .main-header-section.flex-grow-1{
 	flex-grow: 1;
 }
+.main-header-logo{
+	height: 24px;
+	vertical-align: middle;
+}
 @media (max-width: 767px){
 	.MainHeader {
 			height: 66px;
