@@ -14,3 +14,84 @@
     min-height: 24px;
     padding-top: 42px;
 }
+.sidebar-content{
+    padding-right: 60px;
+    width: 258px;
+}
+.sidebar-section{
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+}
+.sidebar-link.selected {
+    font-weight: 700;
+    color: #1b9ad1;
+    box-shadow: inset 3px 0 #1b9ad1;
+}
+.sidebar-link, .sidebar-link.selected {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    line-height: 18px;
+    line-height: 30px;
+}
+.sidebar-link {
+    font-weight: 400;
+    display: block;
+    height: 30px;
+    padding-left: 12px;
+    margin-bottom: 12px;
+}
+.sidebar-link:hover {
+    color: #1b9ad1;
+}
+.sidebar~.profile-sections-wrapper {
+    margin-left: 258px;
+}
+
+.profile-sections-wrapper {
+    padding-top: 42px;
+    padding-bottom: 48px;
+}
+.profile-page-title {
+    margin-bottom: 24px;
+}
+
+.card-list-section-label {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: #58647b;
+}
+.recs-view-section{
+    margin-bottom: 90px;
+}
+.empty-state.compact {
+    padding: 18px;
+}
+.empty-state{
+    text-align: center;
+    padding: 24px;
+    background-color: #e7f5fc;
+    border: 2px dashed #86cfef;
+    color: #58647b;
+}
+.empty-state-icon{
+    display: inline-block;
+    margin-right: 18px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    color: #96a1b4;
+}
+.icon.thumbtack-icon{
+    font-size: large;
+    height: 48px !important;
+    width: 24px !important;
+}
+.thumbtack-icon{
+    transform: rotate(45deg);
+}
