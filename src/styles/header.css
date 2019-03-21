@@ -207,6 +207,51 @@ input.main-header-search-input {
     letter-spacing: .4px;
     line-height: 18px;
 }
+.profile-page-header-content {
+    padding: 27px 36px 0 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: calc(100% - 300px);
+}
+.profile-page-header-name{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    display: inline-block;
+    margin-right: 12px;
+    line-height: 40px;
+}
+.profile-page-header-username{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    display: inline-block;
+    margin-top: 6px;
+}
+.profile-page-header-edit-links{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    margin-top: 12px;
+    line-height: 16px;
+}
+.link-seperator:before {
+    content: "·";
+}
+.link-seperator {
+    position: relative;
+    display: inline-block;
+    margin: 0 6px;
+    vertical-align: top;
+}
+.profile-page-header-bio{
+    margin-top: 24px;
+}
+.profile-page-header-bio-content{
+    display: flex;
+    flex-direction: column;
+}
 @media (max-width: 767px){
 	.MainHeader {
 			height: 66px;

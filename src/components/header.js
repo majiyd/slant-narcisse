@@ -101,8 +101,20 @@ function ProfilePageHeader(props){
 				<ProfileHeaderStat statCount={50} statText={"KARMA"}/>
 			</div>
           </div>
-
-		
+		  <div className="profile-page-header-content">
+			<div className="profile-page-header-name">opeyemi suleiman</div>
+			<div className="profile-page-header-username">@opeyemisuleiman</div>
+            <div className="profile-page-header-edit-links">
+                <a className="" href="#">Update profile</a>
+                <span className="link-seperator"></span>
+                <a className="" href="#">Update image</a>
+            </div>
+            <div className="profile-page-header-bio">
+                <div className="profile-page-header-bio-content">
+                    I’ve been an awesome Slanter since March 19th, 2019!
+                </div>
+            </div>
+		  </div>
 		</div>
       </div>
     </div>
