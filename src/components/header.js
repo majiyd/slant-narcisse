@@ -15,6 +15,14 @@ function  HeaderForm(props){
 		</form>
 	);
 }
+function ProfileHeaderStat(props){
+	return(
+		<div className="profile-page-header-user-stat">
+			<div className="profile-page-header-user-stat-count">{props.statCount}</div>
+			<div className="profile-page-header-user-stat-text">{props.statText}</div>	
+		</div>
+	);
+}
 function MainHeaderBorder(props){
 	return <div className='main-header-border'></div>
 }
@@ -78,14 +86,33 @@ function MainHeader(props){
 	)
 }
 function ProfilePageHeader(props){
-	return <div ></div>
+	return (
+    <div className="profile-page-header-wrapper">
+      <div className="page-content">
+        <div className="profile-header">
+          <div className="profile-page-header-avatar avatar">
+            <img
+              className="profile-page-header-avatar-image"
+              alt="Avatar"
+              src="https://avatars.slant.co/identicons/300/9d224d3f-bc09-59d6-a6cc-de77c2b6d660"
+            />
+			<div className="profile-page-header-user-stats hide-mobile">
+				<ProfileHeaderStat statCount={1} statText={"RECS"}/>
+				<ProfileHeaderStat statCount={50} statText={"KARMA"}/>
+			</div>
+          </div>
+
+		
+		</div>
+      </div>
+    </div>
+  );
 }
 
 export class Header extends React.Component{
 	render(){
 		return (
 			<div className='profile-page-header'>
-				
 				<MainHeader />
 				<ProfilePageHeader />
 			</div>
