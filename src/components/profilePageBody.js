@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbtack } from '@fortawesome/free-solid-svg-icons';
+import { faThumbtack, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 function Sidebar(props){
     return (
@@ -60,12 +60,12 @@ function RecsView(props){
                 <div className="profile-page-title card-list-section-label">
                     MY PINNED RECS (0)
                 </div>
-                <div className="recs-view-section">
+                <div className="view-section">
                     <NoRecs />
                 </div>
             </div>
             <div className="other-recs card-list">
-                <div className="recs-view-section">
+                <div className="view-section">
                     <div className="profile-page-title card-list-section-label">
                         MY OTHER RECS (1)
                     </div>
@@ -75,8 +75,51 @@ function RecsView(props){
         </div>
     )
 }
+function KarmaItem(props){
+    return (
+        <div className='activity-list-item'>
+            <h3 className="activity-list-question-title">
+                <a href="#">What is the best language to learn/practice data structures?</a>
+            </h3>
+            <div className="karma-activity-body">
+                <div className="karma-activity-event" >
+                    <div>
+                        <div className="event">
+                            <div className="event-avatar">
+                                <FontAwesomeIcon
+                                    className="icon plus-circle-icon"
+                                    icon={faPlusCircle}
+                                />
+                            </div>
+                            <div className="Event-Content">
+                                <a rel="nofollow" href="#">You added the <span >con </span><strong>Interpreted language</strong> to <strong>Python</strong>.
+                                </a>
+                                <span className="event-time">a day ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="karma-activity-bonus-count hide-minimum">+10</div>
+            </div>
+        </div>
+    )
+}
 function KarmaView(props) {
-
+    return(
+        <div className="profile-page-karma-view">
+            <div className="card-list contained">
+                <div className="view-section">
+                    <div className="profile-page-title card-list-section-label">Karma</div>
+                    <div className="card-list-item activity-card-list">
+                        <KarmaItem />
+                        <KarmaItem />
+                        <KarmaItem />
+                        <KarmaItem />
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
 function ActivityView(props) {
 
@@ -88,7 +131,8 @@ export class ProfilePageBody extends React.Component{
                 <div className="page-content profile-page-content">
                     <Sidebar />
                     <div className='profile-sections-wrapper'>
-                        <RecsView />
+                        {/*<RecsView />*/}
+                        <KarmaView/>
                     </div>
                 </div>
             </div>

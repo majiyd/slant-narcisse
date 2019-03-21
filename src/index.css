@@ -13,6 +13,16 @@ body {
 	padding-left: 36px;
 	padding-right: 36px;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    line-height: 24px;
+    font-size: inherit;
+    color: #0d0d0d;
+}
+strong {
+    font-weight: 600;
+    font-style: normal;
+}
 a{
 	color: inherit;
 	cursor: pointer;
