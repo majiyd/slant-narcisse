@@ -1,0 +1,16 @@
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 84px);
+}
+.profile-page-body{
+    flex-grow: 1;
+    background-color: #fafbfb;
+}
+.sidebar {
+    float: left;
+    position: relative;
+    width: 258px;
+    min-height: 24px;
+    padding-top: 42px;
+}
