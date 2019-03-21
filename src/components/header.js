@@ -1,8 +1,24 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretDown, faSearch, faBell, faCrown } from '@fortawesome/free-solid-svg-icons'
 
+function  HeaderForm(props){
+	return(
+		<form className='main-header-search-form'>
+			<a href='#' className='main-header-search-icon'>
+				<FontAwesomeIcon
+					className='icon search-icon' 
+					icon={faSearch} 
+				/>
+			</a>
+			<input className="main-header-search-input"  placeholder="What are the best..." type='search'autoComplete="off" />
+		</form>
+	);
+}
 function MainHeaderBorder(props){
 	return <div className='main-header-border'></div>
 }
+
 function MainHeaderContent(props){
 	return (
 		<div className='page-content main-header-content'>
@@ -13,9 +29,43 @@ function MainHeaderContent(props){
 						alt='logo'
 					/>
 				</a>
+				<a className='main-header-dropdown-link'>
+					<FontAwesomeIcon 
+						className='icon main-header-dropdown-link-icon' 
+						icon={faCaretDown} 
+					/>
+				</a>
 			</div>
-			<div className='main-header-section flex-grow-1'></div>
-			<div className='main-header-section'></div>
+			<div className='main-header-section main-header-search hide-minimum'>
+				<HeaderForm />
+			</div>
+			<div className='main-header-section'>
+				<div className='main-header-user-section'>
+					<a href='#' className='main-header-icon-link hide-tablet'>
+						<div className='main-header-icon-wrapper'>
+							<FontAwesomeIcon 
+								className='icon main-header-icon icon-bell' 
+								icon={faBell} 
+							/>
+						</div>
+					</a>
+					<a href='#' className='main-header-icon-link has-text hide-tablet'>
+						<div className='main-header-icon-wrapper'>
+							<FontAwesomeIcon 
+								className='icon main-header-icon icon-crown' 
+								icon={faCrown} 
+							/>
+						</div>
+						<div className="main-header-icon-text">50</div>
+					</a>
+					<div className="main-header-profile-link">
+						<a href="#" className="main-header-profile avatar">
+							<img src="https://avatars.slant.co/identicons/200/9d224d3f-bc09-59d6-a6cc-de77c2b6d660" className="user-image" alt="avatar"/>
+						</a>		
+					</div>
+				</div>
+			</div>
+			<a href="#" className="main-header-link-button hide-mobile"><button className="main-header-button primary-button">ADD QUESTION</button></a>
 		</div>
 	)
 }

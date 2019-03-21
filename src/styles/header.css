@@ -27,12 +27,130 @@
 	flex-shrink: 0;
 	flex-grow: 0;
 }
-.main-header-section.flex-grow-1{
+.main-header-section.main-header-search{
 	flex-grow: 1;
+}
+
+.main-header-home-link{
+	display: flex;
+  margin-right: 12px;
 }
 .main-header-logo{
 	height: 24px;
 	vertical-align: middle;
+}
+.main-header-dropdown-link{
+    display: flex;
+    height: 78px;
+    align-items: center;
+    padding: 18px 9px;
+    color: #4e4376;
+}
+.main-header-dropdown-link, .search-icon{
+	width: 24px;
+	height: 24px;
+}
+.main-header-search{
+	flex-shrink: 1;
+	color: #58647b;
+	background-color: #f3f4f5;
+	height: 54px;
+	border-radius: 9px;
+	margin: 0 36px;
+}
+.main-header-search-form{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}	
+
+.main-header-search-icon{
+	display: flex;
+	margin: 0 12px 0 18px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	color: #4e4376;
+	opacity: .9;
+}
+input.main-header-search-input {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    color: #4e4376;
+    background-color: transparent;
+    height: auto;
+    line-height: 54px;
+    display: inline-block;
+    border: none;
+		border-radius: 4px;
+    margin: 0;
+    padding: 0;
+}	
+.main-header-user-section{
+	display: inline-flex;
+}
+.main-header-icon-link{
+	padding: 18px 9px;
+	display: inline-flex;
+	align-items: center;
+	height: 78px;
+}	
+.main-header-icon-wrapper{
+	position: relative;
+	display: inline-flex;
+	vertical-align: middle;
+}
+.main-header-icon{
+	display: block;
+	width: 24px !important;
+	height: 24px;
+	color: #4e4376;
+	margin: 12px;
+}
+.main-header-icon-text{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 18px;
+	font-weight: 700;
+	color: #4e4376;
+}
+.main-header-profile-link{
+	margin: 0 18px;
+}
+.main-header-profile.avatar{
+	position: relative;
+	top: 15px;
+	transition: opacity .2s;
+	box-shadow: 0 0 0 3px #4e4376;
+	height: 48px;
+	width: 48px;
+}
+.avatar{
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	background: 50%/contain no-repeat #fff;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	font-weight: 700;
+	text-align: center;
+	color: #58647b;
+	vertical-align: top;
+	box-shadow: inset 0 0 0 1.5px #4d4d4d, 0 0 0 1px #e6e8eb;
+	z-index: 100;
+}
+.main-header-link-button{
+	margin-left: 18px;
+
+}
+.main-header-button.primary-button{
+	background: linear-gradient(135deg,#2b5876,#4e4376);
+	padding: 0 10px;
+	height: 42px;
 }
 @media (max-width: 767px){
 	.MainHeader {

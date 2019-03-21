@@ -13,6 +13,68 @@ body {
 	padding-left: 36px;
 	padding-right: 36px;
 }
+a{
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color .15s;
+}
+input, input[type=email], input[type=password], input[type=search], input[type=text], textarea {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    border: 1px solid #d9d9d9;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+    display: block;
+    font-family: BasicSans, Helvetica Neue , Helvetica, Arial, sans-serif;
+    line-height: 24px;
+    padding: 0 12px;
+    width: 100%;
+    margin-top: 12px;
+}
+input::placeholder{
+	font-family: BasicSans, Helvetica Neue , Helvetica, Arial, sans-serif;
+	color: #4e4376;
+}
+button, input, select, textarea {
+    font-family: BasicSans, Helvetica Neue , Helvetica, Arial, sans-serif;
+}
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    line-height: 36px;
+    padding: 0 18px;
+    background-color: transparent;
+    white-space: nowrap;
+    border-radius: 0;
+}
+.primary-button, [type=submit] {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    box-shadow: none;
+    border-radius: 9px;
+    min-width: 120px;
+}
+.primary-button, [type=submit] {
+    color: #fff;
+    background-color: #1b9ad1;
+}
+.primary-button{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    box-shadow: none;
+    border-radius: 9px;
+}
 @media (max-width: 767px){
 	.page-content {
     padding-left: 12px;
