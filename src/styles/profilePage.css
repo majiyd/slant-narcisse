@@ -92,6 +92,115 @@
     height: 48px !important;
     width: 24px !important;
 }
+.icon.thumbtack-icon-sm{
+    height: 12px !important;
+    width: 12px !important;
+    color: #58647b;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    
+}
 .thumbtack-icon{
     transform: rotate(45deg);
+}
+.rec{
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    width: calc(33.333% - 24px);
+    height: 342px;
+    padding: 18px;
+}
+.card-list-item{
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 36px;
+    padding: 18px;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,.05);
+    border: 1px solid #e6e8eb;
+    border-radius: 15px;
+}
+.rec-card-option-content{
+    width: 100%;
+}
+.rec-image{
+    position: relative;
+    height: 162px;
+    margin-bottom: 24px;
+    background: 50%/cover no-repeat;
+    box-shadow: inset 0 0 0 1px #f2f2f2;
+    border-radius: 9px;
+}
+.rec-pin-link{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px #a8b0c1;
+}
+.rec-card-header{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 18px;
+    padding: 0 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.rec-card-subheader  {
+    margin-bottom: 3px;
+}
+
+.secondary-detailed-header {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    line-height: 18px;
+    margin-bottom: 18px;
+    color: #58647b;
+    text-align: start;
+}
+.rec-card-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    max-height: 54px;
+    overflow: hidden;
+}
+@media (max-width: 1279px){
+    .rec {
+        margin-right: 18px;
+        margin-bottom: 18px;
+        width: calc(33.333% - 18px);
+        height: 330px;
+    }
+    .card-list-item{
+        margin: 0 0 30px;
+        padding: 12px;
+    }
+}
+@media (max-width: 1023px){
+    .rec {
+        width: calc(50% - 24px);
+        height: 312px;
+    }
+}
+@media (max-width: 767px){
+    .rec {
+        width: 100%;
+        height: inherit;
+        min-height: 306px;
+        max-height: 360px;
+        margin-right: 0;
+        margin-left: 0;
+    }
 }

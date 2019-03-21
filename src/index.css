@@ -19,6 +19,9 @@ a{
 	text-decoration: none;
 	transition: color .15s;
 }
+a:hover {
+    color: #167ba7;
+}
 input, input[type=email], input[type=password], input[type=search], input[type=text], textarea {
     font-size: 14px;
     font-weight: 400;

@@ -28,6 +28,31 @@ function NoRecs(props){
       </div>
     );
 }
+function Rec (props){
+    return (
+      <div className="rec card-list-item image-list-item">
+        <a className="rec-card-option-content" href="#">
+          <div className="rec-image">
+            <div className="rec-pin-link">
+              <FontAwesomeIcon
+                className="icon thumbtack-icon-sm"
+                icon={faThumbtack}
+              />
+            </div>
+          </div>
+          <div className="rec-card-header">Python</div>
+        </a>
+        <a className="rec-question-link" href="#">
+          <div className="rec-card-subheader secondary-detailed-header">
+            In The Question
+          </div>
+          <div className="rec-card-text">
+            What is the best language to learn/practice data structures?
+          </div>
+        </a>
+      </div>
+    );
+}
 function RecsView(props){
     return(
         <div className="profile-page-recs-view">
@@ -38,6 +63,14 @@ function RecsView(props){
                 <div className="recs-view-section">
                     <NoRecs />
                 </div>
+            </div>
+            <div className="other-recs card-list">
+                <div className="recs-view-section">
+                    <div className="profile-page-title card-list-section-label">
+                        MY OTHER RECS (1)
+                    </div>
+                    <Rec />
+                </div>  
             </div>
         </div>
     )
