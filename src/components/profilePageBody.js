@@ -121,10 +121,48 @@ function KarmaView(props) {
         </div>
     )
 }
+function ActivityItem(props){
+    return(
+        <div className="activity-list-item">
+            <h3 className="activity-list-question-title">
+                <a href="#">What is the best language to learn/practice data structures?</a>
+            </h3>
+            <div className="karma-activity-body">
+                <div className="karma-activity-event" >
+                    <div>
+                        <div className="event">
+                            <div className="event-avatar">
+                                <a className="avatar big"  href="#">
+                                    <img  src="https://avatars.slant.co/identicons/50/9d224d3f-bc09-59d6-a6cc-de77c2b6d660" alt="opeyemi suleiman" />
+                                </a>
+                            </div>
+                            <div className="event-content">
+                                <a rel="nofollow" href="#">Opeyemi added the <span >con </span><strong>Interpreted language</strong> to <strong>Python</strong>.
+                                </a>
+                                <span className="event-time">a day ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    )
+}
 function ActivityView(props) {
     return(
         <div className="profile-page-activity-view">
-
+            <div className="card-list contained">
+                <div className="view-section">
+                <div className="profile-page-title card-list-section-label">Activity</div>
+                    <div className="card-list-item activity-card-list">
+                        <ActivityItem />
+                        <ActivityItem />
+                        <ActivityItem />
+                        <ActivityItem />
+                        <ActivityItem />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

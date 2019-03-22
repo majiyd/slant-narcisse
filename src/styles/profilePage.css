@@ -210,6 +210,14 @@
     flex-grow: 1;
     flex-shrink: 1;
 }
+.event-avatar {
+    margin-right: 12px;
+    align-self: flex-start;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+}
 .event, .event-avatar{
     display: flex;
     align-items: center;
@@ -249,6 +257,10 @@
     color: #fff;
     font-weight: 700;
     border-radius: 3px;
+}
+.avatar.big {
+    height: 36px;
+    width: 36px;
 }
 @media (max-width: 1279px){
     .rec {
