@@ -122,7 +122,11 @@ function KarmaView(props) {
     )
 }
 function ActivityView(props) {
+    return(
+        <div className="profile-page-activity-view">
 
+        </div>
+    )
 }
 export class ProfilePageBody extends React.Component{
     render(){
@@ -132,7 +136,8 @@ export class ProfilePageBody extends React.Component{
                     <Sidebar />
                     <div className='profile-sections-wrapper'>
                         {/*<RecsView />*/}
-                        <KarmaView/>
+                        {/* <KarmaView/> */}
+                        <ActivityView />
                     </div>
                 </div>
             </div>
