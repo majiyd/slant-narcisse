@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown, faSearch, faBell, faCrown } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown, faSearch, faBell, faCrown, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 function  HeaderForm(props){
 	return(
@@ -67,12 +67,21 @@ function MainHeaderDropdown(props){
 class MainHeaderContent extends React.Component{
 	constructor(props){
 		super(props);
-		this.state = {shouldMainHeaderDropdownBeVisible: false}
+		this.state = {
+			shouldMainHeaderDropdownBeVisible: false,
+			isMobileSearchBarVisible: false,
+		}
 		this.handleClick = this.handleClick.bind(this)
+		this.toggleMobileSearchBar = this.toggleMobileSearchBar.bind(this)
 	}
 	handleClick(){
 		this.setState({
 			shouldMainHeaderDropdownBeVisible: !this.state.shouldMainHeaderDropdownBeVisible
+		})
+	}
+	toggleMobileSearchBar(){
+		this.setState({
+			isMobileSearchBarVisible: !this.state.isMobileSearchBarVisible
 		})
 	}
 	render(){
@@ -96,6 +105,22 @@ class MainHeaderContent extends React.Component{
 					<HeaderForm />
 				</div>
 				<div className='main-header-section'>
+					<a href="#" 
+						className="main-header-search-toggle show-minimum" 
+						onClick={this.toggleMobileSearchBar}
+					>
+						{this.state.isMobileSearchBarVisible ?
+							<FontAwesomeIcon
+								className='icon times main-header-search-toggle-icon close'
+								icon={faTimes}
+							/> :
+							<FontAwesomeIcon
+								className='icon main-header-search-toggle-icon open'
+								icon={faSearch}
+							/>
+						}
+												
+					</a>
 					<div className='main-header-user-section'>
 						<a href='#' className='main-header-icon-link hide-tablet'>
 							<div className='main-header-icon-wrapper'>
@@ -169,12 +194,15 @@ function ProfilePageHeader(props){
                             </div>
                         </div>
                     </div>
-                </div>
+					<div className="profile-page-header-user-stats show-mobile">
+						<ProfileHeaderStat statCount={1} statText={"RECS"} />
+						<ProfileHeaderStat statCount={50} statText={"KARMA"} />
+					</div>
+				</div>
             </div>
         </div>
     );
 }
-
 export class Header extends React.Component{
 	render(){
 		return (
