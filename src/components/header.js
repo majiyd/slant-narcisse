@@ -152,6 +152,15 @@ class MainHeaderContent extends React.Component{
 				<a href="#" className="main-header-link-button hide-mobile">
 					<button className="main-header-button primary-button">ADD QUESTION</button>
 				</a>
+				{this.state.isMobileSearchBarVisible ?
+					(
+					<div className="main-header-mobile-search-bar page-content show-minimum">
+						<div className="main-header-section main-header-search">
+							<HeaderForm />
+						</div>
+					</div>
+					) : ""
+				}
 			</div>
 		)
 	}

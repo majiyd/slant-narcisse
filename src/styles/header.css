@@ -371,7 +371,20 @@ input.main-header-search-input {
     .main-header-profile-link{
 	    margin: 0;
     }
+    .main-header-mobile-search-bar{
+        width: 100%;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        background-color: white;
+        z-index: 20000;
+        box-shadow: 0 1px #e6e8eb;
+        padding: 8px 0px 10px 0;
+        border-top: 1px solid #e6e8eb;
+        margin-top: 10px;
+    }
 }
+
 @media (max-width: 424px){
     .main-header-section:first-child{
         flex-grow: 1;
