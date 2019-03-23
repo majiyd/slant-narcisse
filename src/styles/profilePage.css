@@ -281,6 +281,26 @@
     }
 }
 @media (max-width: 767px){
+    .profile-page-body{
+        background-color: #efefef;
+    }
+    .profile-sections-wrapper{
+        margin-left: auto !important;
+    }
+    .mobile-navbar{
+        background-color: white;
+    }
+    .mobile-navbar-link{
+        font-weight: bold;
+        padding: 15px;
+        font-size: 20px;
+        color: #5f5b5b !important;
+    }
+    .mobile-navbar-dropdown-link-icon{
+        margin-left: 2px;
+        position: relative;
+        bottom: 2px;
+    }
     .rec {
         width: 100%;
         height: inherit;

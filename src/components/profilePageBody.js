@@ -1,10 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbtack, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faThumbtack, faPlusCircle,  faCaretDown} from '@fortawesome/free-solid-svg-icons';
 
 function Sidebar(props){
     return (
-      <div className="sidebar">
+      <div className="sidebar hide-mobile">
         <div className="sidebar-content">
           <div className="sidebar-section">
             <a className="sidebar-link selected" href="#"> Recs (1)</a>
@@ -14,6 +14,23 @@ function Sidebar(props){
         </div>
       </div>
     );
+}
+class MobileNavBar extends React.Component{
+    constructor(props){
+        super(props)
+    }
+    render(){
+        return(
+            <div className="mobile-navbar show-mobile">
+                <a className="mobile-navbar-link" href="#">KARMA
+                    <FontAwesomeIcon 
+                        className='icon mobile-navbar-dropdown-link-icon' 
+                        icon={faCaretDown} 
+					/>
+                </a>
+            </div>
+        )
+    }
 }
 function NoRecs(props){
     return (
@@ -170,12 +187,13 @@ export class ProfilePageBody extends React.Component{
     render(){
         return(
             <div className="profile-page-body">
+                <MobileNavBar />
                 <div className="page-content profile-page-content">
                     <Sidebar />
                     <div className='profile-sections-wrapper'>
                         {/*<RecsView />*/}
-                        {/* <KarmaView/> */}
-                        <ActivityView />
+                        <KarmaView/> 
+                        {/* <ActivityView /> */}
                     </div>
                 </div>
             </div>
