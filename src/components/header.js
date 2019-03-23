@@ -68,6 +68,12 @@ class MainHeaderContent extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {shouldMainHeaderDropdownBeVisible: false}
+		this.handleClick = this.handleClick.bind(this)
+	}
+	handleClick(){
+		this.setState({
+			shouldMainHeaderDropdownBeVisible: !this.state.shouldMainHeaderDropdownBeVisible
+		})
 	}
 	render(){
 		return (
@@ -108,12 +114,14 @@ class MainHeaderContent extends React.Component{
 							</div>
 							<div className="main-header-icon-text">50</div>
 						</a>
-						<div className="main-header-profile-link">
+						<div className="main-header-profile-link" onClick={this.handleClick}>
 							<a href="#" className="main-header-profile avatar">
 								<img src="https://avatars.slant.co/identicons/200/9d224d3f-bc09-59d6-a6cc-de77c2b6d660" className="user-image" alt="avatar"/>
 							</a>		
 						</div>
-						<MainHeaderDropdown />
+						{this.state.shouldMainHeaderDropdownBeVisible ? 
+							<MainHeaderDropdown /> : ""
+						}
 					</div>
 				</div>
 				<a href="#" className="main-header-link-button hide-mobile">
