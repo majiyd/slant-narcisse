@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbtack, faPlusCircle,  faCaretDown} from '@fortawesome/free-solid-svg-icons';
+import { faThumbtack, faPlusCircle, faCaretDown, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 function Sidebar(props){
     return (
@@ -17,17 +17,40 @@ function Sidebar(props){
 }
 class MobileNavBar extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
+        this.state = {isMobileNavSelectVisible: false}
+        this.toggleMobileNavbar = this.toggleMobileNavbar.bind(this)
+    }
+    toggleMobileNavbar(){
+        this.setState({isMobileNavSelectVisible: !this.state.isMobileNavSelectVisible})
     }
     render(){
         return(
             <div className="mobile-navbar show-mobile">
-                <a className="mobile-navbar-link" href="#">KARMA
+                <a className="mobile-navbar-link" href="#" onClick={this.toggleMobileNavbar}>KARMA
                     <FontAwesomeIcon 
                         className='icon mobile-navbar-dropdown-link-icon' 
                         icon={faCaretDown} 
 					/>
                 </a>
+                {this.state.isMobileNavSelectVisible ? 
+                    <div className="mobile-nav-select-wrapper">
+                        <div className="mobile-nav-select">
+                            <h4 className="mobile-nav-select-title" >Select Section</h4>
+                            <FontAwesomeIcon
+                                className='icon times mobile-nav-close-icon close'
+                                icon={faTimes}
+                                onClick={this.toggleMobileNavbar}
+                            />
+                        </div>
+                        
+                        <div className="mobile-nav-select-links">
+                            <div className="mobile-nav-select-link-item">RECS</div>
+                            <div className="mobile-nav-select-link-item">KARMA</div>
+                            <div className="mobile-nav-select-link-item">ACTIVITIES</div>
+                        </div>             
+                    </div>  : ""
+                }
             </div>
         )
     }
@@ -191,8 +214,8 @@ export class ProfilePageBody extends React.Component{
                 <div className="page-content profile-page-content">
                     <Sidebar />
                     <div className='profile-sections-wrapper'>
-                        {/*<RecsView />*/}
-                        <KarmaView/> 
+                        <RecsView />
+                        {/* <KarmaView/>  */}
                         {/* <ActivityView /> */}
                     </div>
                 </div>
