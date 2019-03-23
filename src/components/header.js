@@ -64,56 +64,64 @@ function MainHeaderDropdown(props){
 		</div>
 	)
 }
-function MainHeaderContent(props){
-	return (
-		<div className='page-content main-header-content'>
-			<div className='main-header-section'>
-				<a className='main-header-home-link'>
-					<img className='main-header-logo' 
-						src='https://www.slant.co/images/logo.svg' 
-						alt='logo'
-					/>
-				</a>
-				<a className='main-header-dropdown-link'>
-					<FontAwesomeIcon 
-						className='icon main-header-dropdown-link-icon' 
-						icon={faCaretDown} 
-					/>
-				</a>
-			</div>
-			<div className='main-header-section main-header-search hide-minimum'>
-				<HeaderForm />
-			</div>
-			<div className='main-header-section'>
-				<div className='main-header-user-section'>
-					<a href='#' className='main-header-icon-link hide-tablet'>
-						<div className='main-header-icon-wrapper'>
-							<FontAwesomeIcon 
-								className='icon main-header-icon icon-bell' 
-								icon={faBell} 
-							/>
-						</div>
+class MainHeaderContent extends React.Component{
+	constructor(props){
+		super(props);
+		this.state = {shouldMainHeaderDropdownBeVisible: false}
+	}
+	render(){
+		return (
+			<div className='page-content main-header-content'>
+				<div className='main-header-section'>
+					<a className='main-header-home-link'>
+						<img className='main-header-logo' 
+							src='https://www.slant.co/images/logo.svg' 
+							alt='logo'
+						/>
 					</a>
-					<a href='#' className='main-header-icon-link has-text hide-tablet'>
-						<div className='main-header-icon-wrapper'>
-							<FontAwesomeIcon 
-								className='icon main-header-icon icon-crown' 
-								icon={faCrown} 
-							/>
-						</div>
-						<div className="main-header-icon-text">50</div>
+					<a className='main-header-dropdown-link'>
+						<FontAwesomeIcon 
+							className='icon main-header-dropdown-link-icon' 
+							icon={faCaretDown} 
+						/>
 					</a>
-					<div className="main-header-profile-link">
-						<a href="#" className="main-header-profile avatar">
-							<img src="https://avatars.slant.co/identicons/200/9d224d3f-bc09-59d6-a6cc-de77c2b6d660" className="user-image" alt="avatar"/>
-						</a>		
-					</div>
-					<MainHeaderDropdown />
 				</div>
+				<div className='main-header-section main-header-search hide-minimum'>
+					<HeaderForm />
+				</div>
+				<div className='main-header-section'>
+					<div className='main-header-user-section'>
+						<a href='#' className='main-header-icon-link hide-tablet'>
+							<div className='main-header-icon-wrapper'>
+								<FontAwesomeIcon 
+									className='icon main-header-icon icon-bell' 
+									icon={faBell} 
+								/>
+							</div>
+						</a>
+						<a href='#' className='main-header-icon-link has-text hide-tablet'>
+							<div className='main-header-icon-wrapper'>
+								<FontAwesomeIcon 
+									className='icon main-header-icon icon-crown' 
+									icon={faCrown} 
+								/>
+							</div>
+							<div className="main-header-icon-text">50</div>
+						</a>
+						<div className="main-header-profile-link">
+							<a href="#" className="main-header-profile avatar">
+								<img src="https://avatars.slant.co/identicons/200/9d224d3f-bc09-59d6-a6cc-de77c2b6d660" className="user-image" alt="avatar"/>
+							</a>		
+						</div>
+						<MainHeaderDropdown />
+					</div>
+				</div>
+				<a href="#" className="main-header-link-button hide-mobile">
+					<button className="main-header-button primary-button">ADD QUESTION</button>
+				</a>
 			</div>
-			<a href="#" className="main-header-link-button hide-mobile"><button className="main-header-button primary-button">ADD QUESTION</button></a>
-		</div>
-	)
+		)
+	}
 }
 function MainHeader(props){
 	return (
