@@ -26,7 +26,44 @@ function ProfileHeaderStat(props){
 function MainHeaderBorder(props){
 	return <div className='main-header-border'></div>
 }
-
+function MainHeaderDropdown(props){
+	return(
+		<div className="main-header-dropdown dropdown">
+			<a className="dropdown-item main-header-dropdown-item" href="#">
+				<div className="main-header-dropdown-icon">
+					<div className="main-header-profile avatar" >
+						<img  src="https://avatars.slant.co/identicons/200/9d224d3f-bc09-59d6-a6cc-de77c2b6d660" alt="opeyemi suleiman" />
+					</div>
+				</div>
+				My Profile
+			</a>
+			<div className="show-tablet">
+				<a className="dropdown-item" href="#">
+					<div className="main-header-icon-wrapper main-header-dropdown-icon">
+						<FontAwesomeIcon 
+							className='icon main-header-icon icon-crown' 
+							icon={faBell} 
+						/>
+					</div>
+					<span >0</span>&nbsp;New
+				</a>
+				<a className="dropdown-item" href="#">
+					<div className="main-header-icon-wrapper main-header-dropdown-icon">
+						<FontAwesomeIcon 
+							className='icon main-header-icon icon-crown' 
+							icon={faCrown} 
+						/>
+					</div>
+					<span>
+						<span>50</span>&nbsp;Karma
+					</span>
+				</a>
+			</div>
+			<a className=" main-header-dropdown-footer-link dropdown-item show-mobile" href="#">Add Question</a>
+			<a className=" main-header-dropdown-footer-link main-header-dropdown-item dropdown-item">Logout</a>
+		</div>
+	)
+}
 function MainHeaderContent(props){
 	return (
 		<div className='page-content main-header-content'>
@@ -71,6 +108,7 @@ function MainHeaderContent(props){
 							<img src="https://avatars.slant.co/identicons/200/9d224d3f-bc09-59d6-a6cc-de77c2b6d660" className="user-image" alt="avatar"/>
 						</a>		
 					</div>
+					<MainHeaderDropdown />
 				</div>
 			</div>
 			<a href="#" className="main-header-link-button hide-mobile"><button className="main-header-button primary-button">ADD QUESTION</button></a>
