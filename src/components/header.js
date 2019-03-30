@@ -165,13 +165,15 @@ class MainHeaderContent extends React.Component{
 		)
 	}
 }
-function MainHeader(props){
-	return (
-		<div className='main-header'>
-			<MainHeaderBorder />
-			<MainHeaderContent />
-		</div>
-	)
+export class MainHeader extends React.Component{
+	render(){	
+		return (
+			<div className='main-header'>
+				<MainHeaderBorder />
+				<MainHeaderContent />
+			</div>
+		)
+	}
 }
 function ProfilePageHeader(props){
     return (
