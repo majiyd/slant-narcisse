@@ -90,8 +90,7 @@ function RecommendedCard(props){
                                 icon={faCaretDown} 
                             />
                         </span>
-                    </span>
-                    
+                    </span>  
                 </a>
             </div>
         </div>
@@ -102,7 +101,7 @@ function HomePageFeed(props){
         <div className="home-page-feed card-list">
             <RecommendedCard />
             <div className="rec-card-list">
-                
+                <div class="rec-card-list-header">Today</div>
             </div>
         </div>
     )

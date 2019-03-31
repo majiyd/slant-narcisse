@@ -366,6 +366,16 @@ a {
 .rec-card-list{
     margin-bottom: 30px;
 }
+.rec-card-list-header {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    line-height: 48px;
+    margin-bottom: 36px;
+    color: #4d4d4d;
+}
 @media (max-width: 1279px){
     .home-page-feed {
         margin-left: 204px;
@@ -426,7 +436,6 @@ a {
     .home-page-feed {
         margin-left: auto;
         padding-top: 30px;
-       
     }
     .home-page-view{
         background-color: #efefef;
@@ -446,5 +455,13 @@ a {
         line-height: 42px;
         margin-left: 18px;
         margin-right: 6px;
+    }
+    .rec-card-list-header {
+        font-size: 18px;
+        line-height: 24px;
+        line-height: 36px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding-left: 12px;
     }
 }
