@@ -1,7 +1,7 @@
 import React from 'react'
 import {MainHeader} from "./header.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faSearch } from '@fortawesome/free-solid-svg-icons'
+import {faSearch, faCaretDown} from '@fortawesome/free-solid-svg-icons'
 
 function HomePageHeader(props){
     return(
@@ -63,6 +63,50 @@ function NavSideBar(props){
         </div>
     )
 }
+function RecommendedCard(props){
+    const caretIconSpanStyle = {
+        backgroundColor: "white",
+        borderRadius: "50%",
+        color: "#1b9ad1",
+        padding: "10px 15px",
+        marginLeft: 8,
+        marginRight: -4,
+        fontSize: "large",
+    }
+    return(
+        <div className=" card-list-item" >
+            <button className="card-list-answer-skip">Skip</button>
+            <h5 className="card-list-answer-subtitle">Can you help with this question?</h5>
+            <h4 className="card-list-answer-title">
+                <a  href="#">What are the best minimal CSS frameworks?</a>
+            </h4>
+            <div className="card-list-seperator"></div>
+            <div className="card-list-footer center">
+                <a className=" FAB small" >
+                    <span className="FAB-Label">I Recommend...
+                        <span style={caretIconSpanStyle}>
+                            <FontAwesomeIcon 
+                                className='icon icon-caret-down FAB-Icon' 
+                                icon={faCaretDown} 
+                            />
+                        </span>
+                    </span>
+                    
+                </a>
+            </div>
+        </div>
+    )
+}
+function HomePageFeed(props){
+    return(
+        <div className="home-page-feed card-list">
+            <RecommendedCard />
+            <div className="rec-card-list">
+                
+            </div>
+        </div>
+    )
+}
 function HomePageView(props){
     return(
         <div className="home-page-view">
@@ -79,6 +123,7 @@ function HomePageView(props){
             <div>
                 <div className="page-content">
                     <NavSideBar />
+                    <HomePageFeed />
                 </div>
             </div>
         </div>
