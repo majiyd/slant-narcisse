@@ -131,7 +131,38 @@ button {
 .show-tablet, .show-mobile, .show-minimum{
     display: none !important;
 }
+.nav-sidebar-section {
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+    box-shadow: 0 1px #e6e8eb;
+}
+.nav-sidebar-section:last-child {
+    box-shadow: none;
+}
 
+.nav-sidebar-link {
+    font-weight: 400;
+    display: block;
+    height: 30px;
+    padding-left: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.nav-sidebar-link:hover{
+    color: #1b9ad1;
+}
+.nav-sidebar-link, .nav-sidebar-link.selected {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    line-height: 18px;
+    line-height: 30px;
+}
+.nav-sidebar-link.selected {
+    font-weight: 700;
+    color: #1b9ad1;
+    box-shadow: inset 3px 0 #1b9ad1;
+}
 @media (max-width: 1023px){
     .hide-tablet {
         display: none !important;
