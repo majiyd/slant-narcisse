@@ -2,19 +2,19 @@ import React from "react";
 function CardStats(props){
     return(
         <div>
-            <div className="CardList-Stats">     
-                <div className=" CardList-Stats-Item">
+            <div className="card-list-stats">     
+                <div className=" card-list-stats-item">
                     <a href="#">179 Recs</a>
                 </div>
-                <div className="CardList-Stats-Seperator">•</div>
+                <div className="card-list-stats-seperator">•</div>
                 <span>
-                    <div className=" CardList-Stats-Item ">
+                    <div className=" card-list-stats-item ">
                         <a href="#">Gaming</a>
                     </div>
-                    <div className=" CardList-Stats-Item ">
+                    <div className=" card-list-stats-item ">
                         <a href="#">PC</a>
                     </div>
-                    <div className=" CardList-Stats-Item ">
+                    <div className=" card-list-stats-item ">
                         <a href="#">PC Games</a>
                     </div>
                 </span>
@@ -72,7 +72,7 @@ function CardContent (props){
                     <span>See full</span>
                 </a>
             </div>
-            <div className="CardList-Seperator" />
+            <div className="card-list-seperator" />
         </div>
     )
 }
@@ -104,15 +104,15 @@ function CardQuestionHeader (props){
     return(
         <div className="rec-card-question-header">
             <CardStats />
-            <div className="rec-card-question-header-Flex">
-                <h4 className="rec-card-question-title rec-card-question-header-Content">
+            <div className="rec-card-question-header-flex">
+                <h4 className="rec-card-question-title rec-card-question-header-content">
                     <a href="#">
                         What are the best free full offline games for PC that have good graphics?
-                            </a>
+                    </a>
                 </h4>
-                <div className="rec-card-question-header-Button">
+                <div className="rec-card-question-header-button">
                     <a className="FAB micro">
-                        <span className="FAB-Label">I Rec...</span>
+                        <span className="FAB-label">I Rec...</span>
                         {/* <svg className="Icon caret-circle-down-solid FAB-Icon"></svg> */}
                     </a>
                 </div>
