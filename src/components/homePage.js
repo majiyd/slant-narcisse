@@ -84,10 +84,10 @@ function RecommendedCard(props){
             <div className="card-list-seperator"></div>
             <div className="card-list-footer center">
                 <a className=" FAB small" >
-                    <span className="FAB-Label">I Recommend...
+                    <span className="FAB-label">I Recommend...
                         <span style={caretIconSpanStyle}>
                             <FontAwesomeIcon 
-                                className='icon icon-caret-down FAB-Icon' 
+                                className='icon icon-caret-down FAB-icon' 
                                 icon={faCaretDown} 
                             />
                         </span>
@@ -98,15 +98,21 @@ function RecommendedCard(props){
     )
 }
 function HomePageFeed(props){
-    return(
+    return (
         <div className="home-page-feed card-list">
             <RecommendedCard />
             <div className="rec-card-list">
                 <div className="rec-card-list-header">Today</div>
                 <RecCard />
+                <RecCard />
+                <RecCard />
+                <RecCard />
+                <RecCard />
+                <RecCard />
+                <RecCard />
             </div>
         </div>
-    )
+    );
 }
 function HomePageView(props){
     return(

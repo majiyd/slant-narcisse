@@ -350,7 +350,7 @@ a {
     height: 42px;
     border-radius: 21px;
 }
-.FAB-Label {
+.FAB-label {
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -451,7 +451,7 @@ a {
     .card-list-footer {
         padding-top: 12px;
     }
-    .FAB-Label {
+    .FAB-label {
         line-height: 42px;
         margin-left: 18px;
         margin-right: 6px;
