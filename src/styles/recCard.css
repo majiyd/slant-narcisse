@@ -1,0 +1,21 @@
+.card-list-item {
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 36px;
+    padding: 18px;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,.05);
+    border: 1px solid #e6e8eb;
+    border-radius: 15px;
+}
+.card-list-item.has-footer {
+    padding-bottom: 12px;
+}
+.rec-card-question-header{
+    
+}
+@media (max-width: 767px){
+    .card-list-item {
+        margin: 0 0 30px;
+        padding: 12px;
+    }
+}

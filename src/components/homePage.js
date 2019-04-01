@@ -1,5 +1,6 @@
 import React from 'react'
 import {MainHeader} from "./header.js"
+import RecCard from "./recCard"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faSearch, faCaretDown} from '@fortawesome/free-solid-svg-icons'
 
@@ -101,7 +102,8 @@ function HomePageFeed(props){
         <div className="home-page-feed card-list">
             <RecommendedCard />
             <div className="rec-card-list">
-                <div class="rec-card-list-header">Today</div>
+                <div className="rec-card-list-header">Today</div>
+                <RecCard />
             </div>
         </div>
     )
