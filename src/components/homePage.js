@@ -1,6 +1,7 @@
 import React from 'react'
 import {MainHeader} from "./header.js"
 import RecCard from "./recCard"
+import QuestionPageFeed from './questionPage'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faSearch, faCaretDown} from '@fortawesome/free-solid-svg-icons'
 
@@ -51,51 +52,61 @@ function HomePageHeader(props){
     )
 }
 function NavSideBar(props){
-    return(
+    return (
         <div className="nav-sidebar left">
             <div className="nav-sidebar-content">
                 <div className="nav-sidebar-section">
-                    <a className="nav-sidebar-link selected" href="#">Recommendations</a>
-                    <a className="nav-sidebar-link" href="#">Questions</a>
-                    <a className=" nav-sidebar-link" href="#">Top</a>
-                    <a className="nav-sidebar-link" href="#">Improve</a>
+                    <a className="nav-sidebar-link " href="#">
+                        Recommendations
+                    </a>
+                    <a className="nav-sidebar-link selected" href="#">
+                        Questions
+                    </a>
+                    <a className=" nav-sidebar-link" href="#">
+                        Top
+                    </a>
+                    <a className="nav-sidebar-link" href="#">
+                        Improve
+                    </a>
                 </div>
             </div>
         </div>
-    )
+    );
 }
-function RecommendedCard(props){
-    const caretIconSpanStyle = {
-        backgroundColor: "white",
-        borderRadius: "50%",
-        color: "#1b9ad1",
-        padding: "10px 15px",
-        marginLeft: 8,
-        marginRight: -4,
-        fontSize: "large",
-    }
-    return(
-        <div className=" card-list-item" >
-            <button className="card-list-answer-skip">Skip</button>
-            <h5 className="card-list-answer-subtitle">Can you help with this question?</h5>
-            <h4 className="card-list-answer-title">
-                <a  href="#">What are the best minimal CSS frameworks?</a>
-            </h4>
-            <div className="card-list-seperator"></div>
-            <div className="card-list-footer center">
-                <a className=" FAB small" >
-                    <span className="FAB-label">I Recommend...
-                        <span style={caretIconSpanStyle}>
-                            <FontAwesomeIcon 
-                                className='icon icon-caret-down FAB-icon' 
-                                icon={faCaretDown} 
-                            />
-                        </span>
-                    </span>  
-                </a>
+export class RecommendedCard extends React.Component{
+    render(){
+        const caretIconSpanStyle = {
+            backgroundColor: "white",
+            borderRadius: "50%",
+            color: "#1b9ad1",
+            padding: "10px 15px",
+            marginLeft: 8,
+            marginRight: -4,
+            fontSize: "large",
+        }
+        return(
+            <div className=" card-list-item" >
+                <button className="card-list-answer-skip">Skip</button>
+                <h5 className="card-list-answer-subtitle">Can you help with this question?</h5>
+                <h4 className="card-list-answer-title">
+                    <a  href="#">What are the best minimal CSS frameworks?</a>
+                </h4>
+                <div className="card-list-seperator"></div>
+                <div className="card-list-footer center">
+                    <a className=" FAB small" >
+                        <span className="FAB-label">I Recommend...
+                            <span style={caretIconSpanStyle}>
+                                <FontAwesomeIcon 
+                                    className='icon icon-caret-down FAB-icon' 
+                                    icon={faCaretDown} 
+                                />
+                            </span>
+                        </span>  
+                    </a>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 function HomePageFeed(props){
     return (
@@ -130,8 +141,8 @@ function HomePageView(props){
             <div>
                 <div className="page-content">
                     <NavSideBar />
-                    <HomePageFeed />
-                    
+                    {/* <HomePageFeed /> */}
+                    <QuestionPageFeed />
                 </div>
             </div>
         </div>
