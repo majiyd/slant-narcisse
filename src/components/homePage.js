@@ -131,6 +131,7 @@ function HomePageView(props){
                 <div className="page-content">
                     <NavSideBar />
                     <HomePageFeed />
+                    
                 </div>
             </div>
         </div>
