@@ -2,28 +2,30 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCaretDown, faTrophy, faComment,faExpandArrowsAlt} from '@fortawesome/free-solid-svg-icons'
 
-function CardStats(props){
-    return(
-        <div>
-            <div className="card-list-stats">     
-                <div className=" card-list-stats-item">
-                    <a href="#">179 Recs</a>
+export class CardStats extends React.Component{
+    render(){    
+        return(
+            <div>
+                <div className="card-list-stats">     
+                    <div className=" card-list-stats-item">
+                        <a href="#">179 Recs</a>
+                    </div>
+                    <div className="card-list-stats-seperator">•</div>
+                    <span>
+                        <div className=" card-list-stats-item ">
+                            <a href="#">Gaming</a>
+                        </div>
+                        <div className=" card-list-stats-item ">
+                            <a href="#">PC</a>
+                        </div>
+                        <div className=" card-list-stats-item ">
+                            <a href="#">PC Games</a>
+                        </div>
+                    </span>
                 </div>
-                <div className="card-list-stats-seperator">•</div>
-                <span>
-                    <div className=" card-list-stats-item ">
-                        <a href="#">Gaming</a>
-                    </div>
-                    <div className=" card-list-stats-item ">
-                        <a href="#">PC</a>
-                    </div>
-                    <div className=" card-list-stats-item ">
-                        <a href="#">PC Games</a>
-                    </div>
-                </span>
             </div>
-        </div>
-    )
+        )
+    }
 }
 function CardComment(props){
     return(
@@ -111,57 +113,61 @@ function CardImageContent(props){
         </div>
     )
 }
-function CardQuestionHeader (props){
-    const caretIconSpanStyle = {
-        backgroundColor: "white",
-        borderRadius: "50%",
-        color: "#1b9ad1",
-        padding: "0px 4px",
-        marginLeft: 6,
-        marginRight: -4,
-        fontSize: "medium"
-    };
-    return(
-        <div className="rec-card-question-header">
-            <CardStats />
-            <div className="rec-card-question-header-flex">
-                <h4 className="rec-card-question-title rec-card-question-header-content">
-                    <a href="#">
-                        What are the best free full offline games for PC that have good graphics?
-                    </a>
-                </h4>
-                <div className="rec-card-question-header-button">
-                    <a className="FAB micro">
-                        <span className="FAB-label">I Rec...
-                            <span style={caretIconSpanStyle}>
-                                <FontAwesomeIcon
-                                    className='icon icon-caret-down FAB-icon'
-                                    icon={faCaretDown}
-                                />
+export class CardQuestionHeader extends React.Component{
+    render(){    
+        const caretIconSpanStyle = {
+            backgroundColor: "white",
+            borderRadius: "50%",
+            color: "#1b9ad1",
+            padding: "0px 4px",
+            marginLeft: 6,
+            marginRight: -4,
+            fontSize: "medium"
+        };
+        return(
+            <div className="rec-card-question-header">
+                <CardStats />
+                <div className="rec-card-question-header-flex">
+                    <h4 className="rec-card-question-title rec-card-question-header-content">
+                        <a href="#">
+                            What are the best free full offline games for PC that have good graphics?
+                        </a>
+                    </h4>
+                    <div className="rec-card-question-header-button">
+                        <a className="FAB micro">
+                            <span className="FAB-label">I Rec...
+                                <span style={caretIconSpanStyle}>
+                                    <FontAwesomeIcon
+                                        className='icon icon-caret-down FAB-icon'
+                                        icon={faCaretDown}
+                                    />
+                                </span>
                             </span>
-                        </span>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    )
-}
-function CardImage (props){
-    const cardImageStyle = {
-        backgroundImage:
-            "url('https://cdn.slant.co/447c8db4-326f-4853-b4c8-42346fc3c897/-/format/jpeg/-/progressive/yes/-/preview/480x480/')"
+        )
     }
-    return (
-        <div
-            className="rec-card-image images-image-list-item-image"
-            style={cardImageStyle}
-        >
-            <div className="rec-card-image-gradient">
-                <a className="rec-card-image-link" href="#" title="Xonotic" rel="nofollow"/>
-                <CardImageContent />
+}
+export class CardImage extends React.Component{
+    render(){    
+        const cardImageStyle = {
+            backgroundImage:
+                "url('https://cdn.slant.co/447c8db4-326f-4853-b4c8-42346fc3c897/-/format/jpeg/-/progressive/yes/-/preview/480x480/')"
+        }
+        return (
+            <div
+                className="rec-card-image images-image-list-item-image"
+                style={cardImageStyle}
+            >
+                <div className="rec-card-image-gradient">
+                    <a className="rec-card-image-link" href="#" title="Xonotic" rel="nofollow"/>
+                    <CardImageContent />
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 export default class RecCard extends React.Component {
     render() {

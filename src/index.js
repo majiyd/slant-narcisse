@@ -5,6 +5,7 @@ import './styles/header.css';
 import "./styles/profilePage.css";
 import "./styles/homePage.css";
 import "./styles/recCard.css";
+import "./styles/questionCard.css";
 import {Header} from './components/header.js'
 import {ProfilePageBody} from './components/profilePageBody.js';
 import HomePage from './components/homePage'

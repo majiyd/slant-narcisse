@@ -1,0 +1,21 @@
+.card-option-list {
+    display: flex;
+}
+
+.card-option-list>.rec-card-image>.rec-card-image-gradient>.rec-card-image-content>.rec-card-user-rec>.rec-card-user-rec-avatar,
+.card-option-list>.rec-card-image>.rec-card-image-gradient>.rec-card-image-content>.rec-card-user-rec>.rec-card-user-rec-content>.rec-card-user-rec-content-header {
+    display: none;
+}
+
+.card-option-list>.rec-card-image>.rec-card-image-gradient>.rec-card-image-content>.rec-card-user-rec>.rec-card-user-rec-content>.rec-card-Title{
+    white-space: unset;
+}
+@media (max-width: 768px) {
+    .card-option-list>.rec-card-image {
+        display: none;
+    }
+
+    .card-option-list>.rec-card-image:first-child {
+        display: flex;
+    }
+}
