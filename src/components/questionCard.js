@@ -16,6 +16,11 @@ export default class QuestionCard extends React.Component{
                     <CardImage />
                     <CardImage />
                     <CardImage />
+                    {
+                        (this.state.numberOfOptions < 3) ? 
+                            <a href="#"className="add-new-option">add option</a>:
+                            <p className="hidden-options">+17 options</p>
+                    }
                 </div>
             </div>
         );

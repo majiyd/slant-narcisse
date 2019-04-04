@@ -10,6 +10,20 @@
 .card-option-list>.rec-card-image>.rec-card-image-gradient>.rec-card-image-content>.rec-card-user-rec>.rec-card-user-rec-content>.rec-card-Title{
     white-space: unset;
 }
+.add-new-option{
+    margin: auto;
+    padding: 10px;
+}
+.add-new-option::before{
+    content: "+";
+    padding: 2px 5px;
+    border: 1px solid #324;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+.hidden-options{
+    margin: auto;
+}
 @media (max-width: 768px) {
     .card-option-list>.rec-card-image {
         display: none;
