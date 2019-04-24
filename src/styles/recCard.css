@@ -6,7 +6,7 @@ a {
 }
 
 a:hover {
-    color: #167ba7;
+    opacity: 0.7;
 }
 
 textarea {
@@ -45,7 +45,6 @@ button {
     margin-bottom: 36px;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .05);
     border: 1px solid #e6e8eb;
-    border-radius: 15px;
     padding: 0 !important;
 }
  
@@ -68,7 +67,6 @@ button {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .4px;
-    color: #58647b;
     margin-bottom: 6px;
     max-height: 24px;
     overflow: hidden;
@@ -93,6 +91,8 @@ button {
     flex-shrink: 1;
     word-break: break-word;
     margin: auto;
+    color: white;
+    padding: 30px 0px;
 }
 
 .rec-card-question-header-button {
@@ -149,6 +149,8 @@ button {
 }
 
 .rec-card-image-gradient {
+    padding: 24px;
+    color: white !important;
     position: relative;
     width: 100%;
     min-height: inherit;
@@ -166,9 +168,7 @@ button {
 }
 
 .rec-card-image-content {
-    position: absolute;
     left: 24px;
-    margin-right: 24px;
     max-width: calc(100% - 48px);
     bottom: 18px;
     z-index: 101;
@@ -223,7 +223,7 @@ button {
     overflow: hidden;
 }
 
-.rec-card-Title {
+.rec-card-title {
     font-size: 24px;
     font-weight: 600;
     line-height: 30px;
@@ -434,6 +434,7 @@ a.disabled {
     .rec-card-question-title {
         font-size: 19px;
         line-height: 30px;
+        padding: 20px 0px 15px 0px;
     }
 
     .rec-card-image {
@@ -458,7 +459,7 @@ a.disabled {
         display: block !important;
     }
 
-    .rec-card-Title {
+    .rec-card-title {
         font-size: 21px;
         line-height: 30px;
     }

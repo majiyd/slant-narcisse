@@ -26,70 +26,17 @@ export class CardStats extends React.Component {
             <div className=" card-list-stats-item ">
               <a href="#">PC Games</a>
             </div>
+            <div className=" card-list-stats-item ">
+              <a href="#">+13 more</a>
+            </div>
           </span>
         </div>
       </div>
     );
   }
 }
-function CardComment(props) {
-  return (
-    <div className=" rec-card-comment ">
-      <div className="rec-card-comment-avatar avatar big">
-        <img
-          className="show-loggedin"
-          src="https://avatars.slant.co/identicons/300/9d224d3f-bc09-59d6-a6cc-de77c2b6d660"
-          alt="opeyemi suleiman"
-        />
-      </div>
-      <div className="rec-card-comment-input-container">
-        <textarea
-          className="rec-card-comment-input"
-          placeholder="Add a comment..."
-        />
-        <a className=" rec-card-comment-input-submit disabled">Post</a>
-      </div>
-    </div>
-  );
-}
-function CardContent(props) {
-  return (
-    <div className=" rec-card-content">
-      <a className="community-recommendation-body">
-        <div className=" community-recommendation-rec-text  community-recommendation-body-testimonial">
-          game
-        </div>
-      </a>
-      <div className="community-recommendation-rec-footer">
-        <div className=" community-recommendation-rec-reaction-button">
-          <a className="reaction-button-set-link">
-            <button className=" reaction-button has-text">
-              <FontAwesomeIcon
-                className="icon icon-trophy reaction-button-icon"
-                icon={faTrophy}
-              />
-              <span className="reaction-button-text">Helpful</span>
-            </button>
-          </a>
-        </div>
-        <a className="community-recommendation-rec-footer-link">
-          <FontAwesomeIcon
-            className="icon icon-comment community-recommendation-rec-footer-comments-icon"
-            icon={faComment}
-          />
-        </a>
-        <a className="community-recommendation-rec-footer-link community-recommendation-rec-expand-link">
-          <FontAwesomeIcon
-            className="icon icon-expand "
-            icon={faExpandArrowsAlt}
-          />
-          <span>See full</span>
-        </a>
-      </div>
-      <div className="card-list-seperator" />
-    </div>
-  );
-}
+
+
 function CardImageContent(props) {
   return (
     <div className="rec-card-image-content">
@@ -98,7 +45,7 @@ function CardImageContent(props) {
           <div className="rec-card-user-rec-content-header">
             RationalMarduk recommends
           </div>
-          <a className=" rec-card-Title" href="#" title="Xonotic">
+          <a className=" rec-card-title" href="#" title="Xonotic">
             Xonotic
           </a>
         </div>
