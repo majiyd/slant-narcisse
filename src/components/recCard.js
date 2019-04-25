@@ -55,15 +55,7 @@ function CardImageContent(props) {
 }
 export class CardQuestionHeader extends React.Component {
   render() {
-    const caretIconSpanStyle = {
-      backgroundColor: "white",
-      borderRadius: "50%",
-      color: "#1b9ad1",
-      padding: "0px 4px",
-      marginLeft: 6,
-      marginRight: -4,
-      fontSize: "medium"
-    };
+    
     return (
       <div className="rec-card-question-header">
         <CardStats />
