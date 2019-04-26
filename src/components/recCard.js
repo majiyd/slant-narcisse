@@ -95,7 +95,17 @@ export default class RecCard extends React.Component {
     return (
       <div className="rec-card card-list-item has-footer">
         <CardImage />
+        <div className="rec-card-content">
+          <h3 className="rec-card-description"> Lorem ipsum imodium abomasunm linda wisdonm linfgettin seperhafern amedik ikdep</h3>
+          <p><span className="rec-card-content-con">Con</span>lorem ipsum fgtrfh hnjghrb</p>
+          <p><span className="rec-card-content-con">Con</span>lorem ipsum fgtrfh hnjghrb ihy</p>
+          <p><span className="rec-card-content-con">Con</span>lorem ipsum fgtrfh hnjghrb ihy</p>
+          <p><span className="rec-card-content-con">Con</span>lorem ipsum fgtrfh hnjghrb ihy</p>
+          <p><span className="rec-card-content-pro">Pro</span>lorem ipsum fgtrfh hnjghrb ihy</p>
+          <p><span className="rec-card-content-pro">Pro</span>lorem ipsum fgtrfh hnjghrb ihy</p>
+        </div>
       </div>
+      
     );
   }
 }

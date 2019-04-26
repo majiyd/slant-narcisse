@@ -325,6 +325,9 @@ a {
     padding: 12px 0;
     text-align: center;
 }
+.card-list-answer-title > a{
+    color: black !important;
+}
 .card-list-seperator {
     width: 100%;
     height: 1px;

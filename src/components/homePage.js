@@ -161,8 +161,8 @@ function HomePageView(props) {
       <div>
         <div className="page-content">
           <NavSideBar />
-          {/* <HomePageFeed /> */}
-          <QuestionPageFeed />
+          <HomePageFeed />
+          {/* <QuestionPageFeed /> */}
         </div>
       </div>
     </div>
