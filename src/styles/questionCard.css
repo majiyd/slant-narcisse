@@ -16,31 +16,27 @@ a{
 }
 .question-card{
   padding: 24px !important;
-  text-shadow: 1px 1px 3px#324
-}
-.card-option-list {
-  display: flex;
-}
-.card-option-list > .rec-card-image {
-  margin: 30px 5px;
-  box-shadow: 5px 4px 9px 2px rgba(51, 51, 51, 0.65);
+  text-shadow: 1px 1px 3px#324;
+  background: linear-gradient(146deg, #324, #213)
 }
 
-.add-new-option {
-  margin: auto;
-  padding: 10px;
+.question-card-option {
+  background-color: rgba(51, 34, 68, 0.699);
+  padding: 7px 10px;
+  margin-right: 10px;
+  display: inline-flex;
+  margin-top: 6px;
+  font-size: 0.9rem;
 }
-
+.add-new-option{
+  background-color: transparent;
+}
 .add-new-option::before {
   content: "+";
-  padding: 2px 5px;
-  border: 1px solid #324;
+  padding: 0px 7px;
+  border: 1px solid #fff;
   border-radius: 50%;
   margin-right: 7px;
-}
-
-.hidden-options {
-  margin: auto;
 }
 
 @media (max-width: 768px) {
